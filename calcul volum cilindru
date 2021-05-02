@@ -1,0 +1,49 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Calcul volum cilindru</title>
+  <style>
+      html{margin-left: 15px;
+      background-color: rgba(3, 122, 112, 0.603);}
+  input {
+    margin: 7px;
+    background-color:salmon ;
+    
+}
+label, h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+}
+  </style>
+
+
+</head>
+
+<body>
+    <h1>Calculator volum cilindru:</h1>
+<label>Raza bazei cilindrului:</label>
+<br>
+<input id="radius" type="number" onchange="math()" value=1>
+<br>
+<label>Inaltime:</label>
+<br>
+<input id="height" type="number" onchange="math()" value=1>
+<br>
+<label>Rezultat:</label>
+<br>
+<input id="out" type="number" disabled value="3.1415926535898">
+<br>
+  <script> 
+  function math() {
+	var radius = document.getElementById("radius").value;
+	var height = document.getElementById("height").value;
+	var out = document.getElementById("out");
+	out.value= Math.PI*radius*radius*height;
+}
+    </script>
+</body>
+</html>
